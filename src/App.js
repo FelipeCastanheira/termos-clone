@@ -1,15 +1,20 @@
 import './App.css';
+import Header from './components/Header';
+import Main from './components/Main';
+import WordProvider from './context/WordProvider';
 
 function App() {
   return (
-    <div className="App">
+    <WordProvider>
+      <Header />
+      <Main />
       <header className="App-header">
         <button type="button" className="c-default">Cor Padrão</button>
         <button type="button" className="c-used">Cor Usada</button>
         <button type="button" className="c-almost">Cor Lugar-Errado</button>
         <button type="button" className="c-correct">Cor Correta</button>
       </header>
-    </div>
+    </WordProvider>
   );
 }
 
