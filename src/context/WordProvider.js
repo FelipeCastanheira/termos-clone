@@ -5,7 +5,13 @@ import picWord from '../services/functions';
 
 function WordProvider({ children }) {
   const [data, setData] = useState('');
-  const [attempts, setAttempts] = useState([]);
+  const [attempts, setAttempts] = useState([
+    ['A', 'B', 'C', 'D', 'E'],
+    ['A', 'B', 'C', 'D', 'E'],
+    ['A', 'B', 'C', 'D', 'E'],
+    ['A', 'B', 'C', 'D', 'E'],
+    ['A', 'B', 'C', 'D', 'E'],
+  ]);
 
   useEffect(() => {
     setData(picWord());
