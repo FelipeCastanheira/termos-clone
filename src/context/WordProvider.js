@@ -5,6 +5,7 @@ import picWord from '../services/functions';
 
 function WordProvider({ children }) {
   const [data, setData] = useState('');
+  const [attempts, setAttempts] = useState([]);
 
   useEffect(() => {
     setData(picWord());
@@ -13,6 +14,8 @@ function WordProvider({ children }) {
   const globalState = {
     data,
     setData,
+    attempts,
+    setAttempts,
   };
 
   return (
