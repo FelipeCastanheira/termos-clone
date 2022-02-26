@@ -11,6 +11,10 @@ body {
   color: white;
 }
 
+h2 {
+  font-size: 30px;
+}
+
 .c-default {
   background-color: #504a4b;
 }
@@ -39,4 +43,25 @@ input {
 
 button {
   cursor: pointer;
+}
+
+.letter {
+  background-color: #504a4b;
+  border-radius: 3px;
+  margin: 2px;
+  padding: 5px 8px;
+  text-transform: uppercase;
+  width: 20px;
+}
+
+.nextWord {
+  background-color: #312a2c2f;
+  color: transparent;
+}
+
+.curWord {
+  background-color: transparent;
+  border: 3px solid #504a4b;
+  color: transparent;
+  padding: 3px 5px;
 }

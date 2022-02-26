@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import WordContext from './WordContext';
-import picWord from '../services/functions';
+import { picWord } from '../services/functions';
 
 function WordProvider({ children }) {
   const [data, setData] = useState('');
+  const [counter, setCounter] = useState(0);
+  const [input, setInput] = useState('');
   const [attempts, setAttempts] = useState([
     ['A', 'B', 'C', 'D', 'E'],
     ['A', 'B', 'C', 'D', 'E'],
@@ -22,6 +24,10 @@ function WordProvider({ children }) {
     setData,
     attempts,
     setAttempts,
+    counter,
+    setCounter,
+    input,
+    setInput,
   };
 
   return (

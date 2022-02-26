@@ -1,10 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import WordContext from "../context/WordContext";
 
 function Keyboard() {
-  const { setAttempts } = useContext(WordContext);
-  const [input, setInput] = useState('');
-  const [counter, setCounter] = useState(0);
+  const { setAttempts, counter, setCounter,
+    input, setInput } = useContext(WordContext);
+  
   const handleClick = () => {
     setAttempts((prevAttempts) => prevAttempts
       .map((prev, i) => {
