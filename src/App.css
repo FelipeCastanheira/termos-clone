@@ -3,6 +3,7 @@
   color: white;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 body {
@@ -25,4 +26,17 @@ body {
 
 .c-correct {
   background-color: #3aa394;
+}
+
+.word-row {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  background-color: #312a2c;
+}
+
+button {
+  cursor: pointer;
 }
