@@ -2,15 +2,14 @@ import React, { useContext } from "react";
 import PropTypes from 'prop-types';
 import WordContext from "../context/WordContext";
 
-function RowOfLetters(index) {
+function RowOfLetters({ index }) {
   const { attempts } = useContext(WordContext);
-  console.log(attempts[0]);
   return (
-        <section className="word-row">
-          { attempts[index].split('').map((letter) => (
-            <h2 key={ letter }>{ letter }</h2>
-          ))}
-        </section>
+    <section className="word-row">
+      { attempts[index].map((letter, index) => (
+        <h2 key={ `${letter} +${index}` }>{ letter }</h2>
+      ))}
+    </section>
   )
 }
 
