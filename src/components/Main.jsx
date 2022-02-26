@@ -1,12 +1,13 @@
-import React from "react";
-import { FIVE_NUMBERS } from "../services/constants";
+import React, { useContext } from "react";
+import WordContext from "../context/WordContext";
 import RowOfLetters from "./RowOfLetters";
 
 function Main() {
+  const { attempts } = useContext(WordContext);
   return(
     <main>
-      { FIVE_NUMBERS.map((num, index) => (
-        <RowOfLetters key={ num } index={ index } />
+      { attempts.map((_num, index) => (
+        <RowOfLetters key={ index } index={ index } />
       ))}
     </main>
   )
