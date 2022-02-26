@@ -4,9 +4,17 @@ import WordContext from "../context/WordContext";
 function Keyboard() {
   const { setAttempts } = useContext(WordContext);
   const [input, setInput] = useState('');
+  const [counter, setCounter] = useState(0);
   const handleClick = () => {
-    setAttempts((prevAttempts) => [...prevAttempts, input]);
+    setAttempts((prevAttempts) => prevAttempts
+      .map((prev, i) => {
+        if (i === counter) {
+          return [...input]
+        }
+        return prev;
+      }));
     setInput('');
+    setCounter((prevCounter) => (prevCounter + 1));
   }
   return (
     <section>
