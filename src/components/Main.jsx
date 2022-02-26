@@ -5,8 +5,8 @@ import RowOfLetters from "./RowOfLetters";
 function Main() {
   return(
     <main>
-      { FIVE_NUMBERS.map(() => (
-        <RowOfLetters />
+      { FIVE_NUMBERS.map((num, index) => (
+        <RowOfLetters key={ num } index={ index } />
       ))}
     </main>
   )
