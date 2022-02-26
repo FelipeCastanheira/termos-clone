@@ -32,3 +32,11 @@ body {
   display: flex;
   justify-content: center;
 }
+
+input {
+  background-color: #312a2c;
+}
+
+button {
+  cursor: pointer;
+}
