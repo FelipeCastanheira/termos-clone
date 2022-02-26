@@ -1,9 +1,15 @@
 import { WORD_LIST } from "./constants";
 
-const picWord = () => {
+export const picWord = () => {
   const numOfWords = WORD_LIST.length;
   const index = Math.floor(Math.random() * numOfWords);
   return WORD_LIST[index];
 }
 
-export default picWord;
+export const wordClassName = (index, counter) => {
+  const subtraction = index - counter;
+  if (subtraction < 0) {
+    return 'prevWord';
+  }
+  return (subtraction ? 'nextWord' : 'curWord');
+}
