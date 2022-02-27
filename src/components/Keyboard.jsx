@@ -17,6 +17,7 @@ function Keyboard() {
     setInput('');
     setCounter((prevCounter) => (prevCounter + 1));
   }
+  //todo: setInput with keyboard buttons
   return (
     <section>
       <input
