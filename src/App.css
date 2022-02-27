@@ -21,7 +21,7 @@ h2 {
 
 .c-used {
   background-color: #312a2c;
-  color: rgba(255, 255, 255, 0.3);
+  color: white;
 }
 
 .c-almost {
@@ -41,16 +41,12 @@ input {
   background-color: #312a2c;
 }
 
-button {
-  cursor: pointer;
-}
-
 .letter {
   border-radius: 3px;
   margin: 2px;
-  padding: 5px 8px;
+  padding: 3px 8px;
   text-transform: uppercase;
-  width: 20px;
+  width: 25px;
 }
 
 .nextWord {
@@ -63,4 +59,26 @@ button {
   border: 3px solid #504a4b;
   color: transparent;
   padding: 3px 5px;
+}
+
+header {
+  margin: 20px auto 50px;
+}
+
+main {
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #504a4b;
+  cursor: pointer;
+  font-size: 22px;
+  margin: 5px;
+  padding: 5px 8px;
+  text-transform: uppercase;
+}
+
+.c-red {
+  background-color: rgba(255, 0, 0, 0.527);
+  color: white;
 }

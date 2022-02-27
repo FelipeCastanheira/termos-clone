@@ -10,7 +10,7 @@ function RowOfLetters({ index }) {
       { attempts[index].map((letter, letterIndex) => (
         <h2
           key={ `${letter} +${letterIndex}` }
-          className={ getClassName(index, counter, letter, letterIndex, data) }
+          className={ getClassName(index, counter, letterIndex, data, attempts[index]) }
         >
           { letter }
         </h2>

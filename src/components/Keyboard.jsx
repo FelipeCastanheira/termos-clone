@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import WordContext from "../context/WordContext";
+import { FIRST_LINE, SECOND_LINE, THIRD_LINE } from "../services/constants";
 
 function Keyboard() {
   const { setAttempts, counter, setCounter,
@@ -30,6 +31,25 @@ function Keyboard() {
       >
         Enter
       </button>
+      <div>
+        { FIRST_LINE.map((keyButton) => (
+          <button type="button" key={ keyButton }>{ keyButton }</button>
+        ))}
+      </div>
+      <div>
+        { SECOND_LINE.map((keyButton) => (
+          <button type="button" key={ keyButton }>{ keyButton }</button>
+        ))}
+        <button type="button">Apagar</button>
+      </div>
+      <div>
+        { THIRD_LINE.map((keyButton) => (
+          <button type="button" key={ keyButton }>{ keyButton }</button>
+        ))}
+        <button type="button">Enter</button>
+      </div>
+      <span className="c-red">Teclado em Construção:</span>
+      <span> use o input</span>
     </section>
   )
 }
