@@ -89,6 +89,10 @@ button {
   text-transform: uppercase;
 }
 
+.ml-5 {
+  margin-left: 15px;
+}
+
 button.c-used {
   background-color: #312a2c;
   color: #504a4b;
