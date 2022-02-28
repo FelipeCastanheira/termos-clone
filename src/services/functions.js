@@ -58,3 +58,21 @@ export const getClassName = (index, counter, letterIndex, word, input) => {
   const sndClassName = letterClassName(letterIndex, word, input);
   return `letter ${firstClassName} ${sndClassName}`;
 }
+
+const isLetterCorrect = (attempts, data, letter) => {
+  return attempts.reduce((acc, word) => {
+    const isCorrect = word
+      .some((char, i) => (char === data[i]) && (data[i] === letter));
+    return (isCorrect || acc);
+  }, false)
+}
+
+export const getLetterColor = (attempts, data, letter) => {
+  if (attempts.some((word) => word.includes(letter))) {
+    if (isLetterCorrect(attempts, data, letter)) {
+      return 'c-correct';
+    }
+    return (data.includes(letter) ? 'c-almost' : 'c-used');
+  }
+  return 'c-default';
+}
