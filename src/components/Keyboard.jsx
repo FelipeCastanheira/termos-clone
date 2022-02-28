@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import WordContext from "../context/WordContext";
-import { FIRST_LINE, SECOND_LINE, THIRD_LINE } from "../services/constants";
+import { FIRST_LINE, SECOND_LINE, THIRD_LINE, WORD_LENGTH } from "../services/constants";
 import { getLetterColor } from "../services/functions";
 
 function Keyboard() {
@@ -84,9 +84,10 @@ function Keyboard() {
         </button>
         ))}
         <button
-        type="button"
-        onClick={ handleClick }
-        className="c-default"
+          type="button"
+          onClick={ handleClick }
+          className="c-default"
+          disabled={ input.length !== WORD_LENGTH }
         >
           Enter
         </button>
