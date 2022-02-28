@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import WordContext from "../context/WordContext";
 import { FIRST_LINE, SECOND_LINE, THIRD_LINE } from "../services/constants";
+import { getLetterColor } from "../services/functions";
 
 function Keyboard() {
-  const { setAttempts, counter, setCounter,
+  const { setAttempts, counter, setCounter, attempts, data,
     input, setInput } = useContext(WordContext);
   
   const handleKeyboard = ({ target }) => {
@@ -43,6 +44,7 @@ function Keyboard() {
             key={ keyButton }
             type="button"
             id={ `${keyButton}-btn` }
+            className={ getLetterColor(attempts, data, keyButton) }
             onClick={ handleKeyboard }
           >
             { keyButton }
@@ -54,6 +56,7 @@ function Keyboard() {
           <button
           key={ keyButton }
           type="button"
+          className={ getLetterColor(attempts, data, keyButton) }
           id={ `${keyButton}-btn` }
           onClick={ handleKeyboard }
         >
@@ -73,6 +76,7 @@ function Keyboard() {
           <button
           key={ keyButton }
           type="button"
+          className={ getLetterColor(attempts, data, keyButton) }
           id={ `${keyButton}-btn` }
           onClick={ handleKeyboard }
         >
