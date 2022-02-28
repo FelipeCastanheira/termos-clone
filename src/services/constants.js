@@ -16,6 +16,7 @@ export const WORD_LIST = [
 ];
 
 export const FIVE_NUMBERS = [1, 2, 3, 4, 5];
+export const WORD_LENGTH = 5;
 
 export const FIRST_LINE = 'qwertyuiop'.split('');
 export const SECOND_LINE = 'asdfghjkl'.split('');
