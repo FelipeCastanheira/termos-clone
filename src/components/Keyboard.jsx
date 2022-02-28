@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import WordContext from "../context/WordContext";
-import { FIRST_LINE, SECOND_LINE, THIRD_LINE } from "../services/constants";
+import { FIRST_LINE, SECOND_LINE, THIRD_LINE, WORD_LENGTH } from "../services/constants";
 import { getLetterColor } from "../services/functions";
 
 function Keyboard() {
@@ -23,21 +23,9 @@ function Keyboard() {
     setInput('');
     setCounter((prevCounter) => (prevCounter + 1));
   }
-  //todo: setInput with keyboard buttons
+  
   return (
     <section>
-      <input
-        type="text"
-        value={ input }
-        onChange={ ({ target }) => setInput(target.value)}
-      />
-      <button
-        type="button"
-        onClick={ handleClick }
-        className="c-default"
-      >
-        Enter
-      </button>
       <div>
         { FIRST_LINE.map((keyButton) => (
           <button
@@ -66,9 +54,9 @@ function Keyboard() {
         <button
         type="button"
         onClick={ () => setInput((prevInput) => prevInput.slice(0,-1)) }
-        className="c-default"
+        className="c-default ml-5"
         >
-          Apagar
+          <i className="fas fa-backspace"></i>
         </button>
       </div>
       <div>
@@ -84,9 +72,10 @@ function Keyboard() {
         </button>
         ))}
         <button
-        type="button"
-        onClick={ handleClick }
-        className="c-default"
+          type="button"
+          onClick={ handleClick }
+          className="c-default ml-5"
+          disabled={ input.length !== WORD_LENGTH }
         >
           Enter
         </button>

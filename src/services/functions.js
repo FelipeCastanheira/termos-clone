@@ -76,3 +76,11 @@ export const getLetterColor = (attempts, data, letter) => {
   }
   return 'c-default';
 }
+
+export const getInputClassName = (letterIndex, input) => {
+  const subtraction = letterIndex - input.length;
+  if (subtraction < 0) {
+    return 'letter prevInputLetter';
+  }
+  return (subtraction ? 'letter curWord' : 'letter curInputLetter');
+}
