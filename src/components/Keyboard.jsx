@@ -23,21 +23,9 @@ function Keyboard() {
     setInput('');
     setCounter((prevCounter) => (prevCounter + 1));
   }
-  //todo: setInput with keyboard buttons
+  
   return (
     <section>
-      <input
-        type="text"
-        value={ input }
-        onChange={ ({ target }) => setInput(target.value)}
-      />
-      <button
-        type="button"
-        onClick={ handleClick }
-        className="c-default"
-      >
-        Enter
-      </button>
       <div>
         { FIRST_LINE.map((keyButton) => (
           <button
