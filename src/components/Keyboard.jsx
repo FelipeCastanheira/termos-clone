@@ -54,9 +54,9 @@ function Keyboard() {
         <button
         type="button"
         onClick={ () => setInput((prevInput) => prevInput.slice(0,-1)) }
-        className="c-default"
+        className="c-default ml-5"
         >
-          Apagar
+          <i className="fas fa-backspace"></i>
         </button>
       </div>
       <div>
@@ -74,7 +74,7 @@ function Keyboard() {
         <button
           type="button"
           onClick={ handleClick }
-          className="c-default"
+          className="c-default ml-5"
           disabled={ input.length !== WORD_LENGTH }
         >
           Enter
