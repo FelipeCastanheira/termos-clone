@@ -1,3 +1,6 @@
+$correctColor: #3aa394;
+$defaultColor: #504a4b;
+
 * {
   border: none;
   color: white;
@@ -16,7 +19,7 @@ h2 {
 }
 
 .c-default {
-  background-color: #504a4b;
+  background-color: $defaultColor;
 }
 
 .c-used {
@@ -29,16 +32,12 @@ h2 {
 }
 
 .c-correct {
-  background-color: #3aa394;
+  background-color: $correctColor;
 }
 
 .word-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .letter {
@@ -56,14 +55,14 @@ h2 {
 
 .curWord {
   background-color: transparent;
-  border: 3px solid #504a4b;
+  border: 3px solid $defaultColor;
   color: transparent;
   padding: 3px 5px;
 }
 
 .curInputLetter {
   background-color: transparent;
-  border: 3px solid #504a4b;
+  border: 3px solid $defaultColor;
   border-width: 3px 3px 7px 3px;
   height: 32px;
   padding: 3px 5px;
@@ -71,7 +70,7 @@ h2 {
 
 .prevInputLetter {
   background-color: transparent;
-  border: 3px solid #504a4b;
+  border: 3px solid $defaultColor;
   padding: 3px 5px;
 }
 
@@ -84,7 +83,7 @@ main {
 }
 
 button {
-  background-color: #504a4b;
+  background-color: $defaultColor;
   border-radius: 6px;
   cursor: pointer;
   font-size: 25px;
@@ -99,11 +98,10 @@ button {
 
 button.c-used {
   background-color: #312a2c;
-  color: #504a4b;
+  color: $defaultColor;
 }
 
 .c-red {
   background-color: rgba(255, 0, 0, 0.527);
   color: white;
 }
-/*# sourceMappingURL=App.css.map */
