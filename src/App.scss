@@ -1,5 +1,8 @@
+$bgColor: #6e5c62;
 $correctColor: #3aa394;
 $defaultColor: #504a4b;
+$wrongColor: #312a2c;
+$almostCorrect: #d3ad69;
 
 * {
   border: none;
@@ -10,7 +13,7 @@ $defaultColor: #504a4b;
 }
 
 body {
-  background-color: #6e5c62;
+  background-color: $bgColor;
   color: white;
 }
 
@@ -23,12 +26,12 @@ h2 {
 }
 
 .c-used {
-  background-color: #312a2c;
+  background-color: $wrongColor;
   color: white;
 }
 
 .c-almost {
-  background-color: #d3ad69;
+  background-color: $almostCorrect;
 }
 
 .c-correct {
@@ -97,11 +100,6 @@ button {
 }
 
 button.c-used {
-  background-color: #312a2c;
+  background-color: $wrongColor;
   color: $defaultColor;
-}
-
-.c-red {
-  background-color: rgba(255, 0, 0, 0.527);
-  color: white;
 }
