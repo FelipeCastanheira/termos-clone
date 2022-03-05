@@ -1,9 +1,17 @@
-import { WORD_LIST } from "./constants";
+import { NORMAL_LETTERS, SPECIAL_LETTERS, WORD_LIST } from "./constants";
 
 export const picWord = () => {
   const numOfWords = WORD_LIST.length;
   const index = Math.floor(Math.random() * numOfWords);
-  return WORD_LIST[index];
+  let currentWord = WORD_LIST[index];
+  for (let i = 0; i < currentWord.length; i += 1) {
+    currentWord = SPECIAL_LETTERS.reduce((acc, specialChar, index) => {
+      return acc[i] === specialChar
+        ? acc.replace(specialChar, NORMAL_LETTERS[index])
+        : acc;
+    }, currentWord);
+  }
+  return currentWord;
 }
 
 export const wordClassName = (index, counter) => {
