@@ -96,6 +96,7 @@ export const WORD_LIST = ['sagaz', 'negro', 'âmago', 'êxito', 'mexer', 'termo'
 
 export const FIVE_NUMBERS = [1, 2, 3, 4, 5];
 export const WORD_LENGTH = 5;
+export const MAX_COUNTER = 6;
 
 export const FIRST_LINE = 'qwertyuiop'.split('');
 export const SECOND_LINE = 'asdfghjkl'.split('');
