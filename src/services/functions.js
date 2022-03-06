@@ -1,4 +1,4 @@
-import { NORMAL_LETTERS, SPECIAL_LETTERS, WORD_LIST } from "./constants";
+import { MAX_COUNTER, NORMAL_LETTERS, SPECIAL_LETTERS, WORD_LIST } from "./constants";
 
 export const picWord = () => {
   const numOfWords = WORD_LIST.length;
@@ -91,4 +91,28 @@ export const getInputClassName = (letterIndex, input) => {
     return 'letter prevInputLetter';
   }
   return (subtraction ? 'letter curWord' : 'letter curInputLetter');
+}
+
+export const isFinished = (data, attempts, counter) => {
+  const win = attempts.some((word) => word.join('') === data);
+  const lose = counter === MAX_COUNTER;
+  return (win || lose);
+}
+
+export const feedback = (data, attempts) => {
+  const goodAnswers = [
+    'ESPETACULAR!!!',
+    'Fenomenal!',
+    'Muito bom!',
+    'Jogou bem!',
+    'Você venceu!',
+    'Ufa! Essa foi com emoção até o fim!',
+  ]
+  for (let i = 0; i < attempts.length; i += 1) {
+    const word = attempts[i].join('');
+    if (word === data) {
+      return goodAnswers[i];
+    }
+  }
+  return 'Que pena... não foi dessa vez';
 }

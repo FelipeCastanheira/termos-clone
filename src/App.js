@@ -1,4 +1,5 @@
 import './App.css';
+import EndGame from './components/EndGame';
 import Header from './components/Header';
 import Keyboard from './components/Keyboard';
 import Main from './components/Main';
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Main />
       <Keyboard />
+      <EndGame />
     </WordProvider>
   );
 }
