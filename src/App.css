@@ -101,4 +101,17 @@ button.c-used {
   background-color: #312a2c;
   color: #504a4b;
 }
+
+#root {
+  position: relative;
+}
+
+.endGame {
+  background-color: #312a2cdf;
+  color: #3aa394;
+  font-size: 25px;
+  inset: 0;
+  padding: 30vh 20vw;
+  position: absolute;
+}
 /*# sourceMappingURL=App.css.map */
