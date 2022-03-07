@@ -103,3 +103,16 @@ button.c-used {
   background-color: $wrongColor;
   color: $defaultColor;
 }
+
+#root {
+  position: relative;
+}
+
+.endGame {
+  background-color: #312a2cdf;
+  color: $correctColor;
+  font-size: 25px;
+  inset: 0;
+  padding: 30vh 20vw;
+  position: absolute;
+}

@@ -7,7 +7,7 @@ function EndGame() {
   return (
   <>
     { isFinished(data, attempts, counter)
-      && <div>{ feedback(data, attempts) }</div>
+      && <div className="endGame">{ feedback(data, attempts) }</div>
     }
   </>
   );
