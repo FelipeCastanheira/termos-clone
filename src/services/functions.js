@@ -114,5 +114,5 @@ export const feedback = (data, attempts) => {
       return goodAnswers[i];
     }
   }
-  return 'Que pena... não foi dessa vez';
+  return `A palavra certa era ${data}`;
 }
