@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import WordContext from './WordContext';
 import { picWord } from '../services/functions';
+import { loadFBase } from '../services/firebase';
 
 function WordProvider({ children }) {
   const [data, setData] = useState('');
   const [counter, setCounter] = useState(0);
   const [input, setInput] = useState('');
+  const [fireMsg, setFireMsg] = useState('');
   const [attempts, setAttempts] = useState([
     ['A', 'B', 'C', 'D', 'E'],
     ['A', 'B', 'C', 'D', 'E'],
@@ -18,7 +20,9 @@ function WordProvider({ children }) {
 
   useEffect(() => {
     setData(picWord());
+    setFireMsg(loadFBase());
   }, [])
+  console.log(fireMsg);
 
   const globalState = {
     data,

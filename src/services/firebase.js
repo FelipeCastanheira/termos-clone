@@ -9,6 +9,25 @@ const firebaseConfig = {
   appId: "1:752096840123:web:60b2f89e7f704985be5c9e"
 };
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 
-export default app;
+export const loadFBase = () => {
+  try {
+    // let app = firebase.app();
+    let features = [
+      'auth', 
+      'database', 
+      'firestore',
+      'functions',
+      'messaging', 
+      'storage', 
+      'analytics', 
+      'remoteConfig',
+      'performance',
+    ].filter(feature => typeof app[feature] === 'function');
+    return `Firebase SDK loaded with ${features.join(', ')}`;
+  } catch (e) {
+    console.error(e);
+    return 'Error loading the Firebase SDK, check the console.';
+  }
+}
